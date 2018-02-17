@@ -13,6 +13,8 @@ Their work has been adapted to suit my personal need for being able to host [MKD
 
 Many thanks to [Zmartzone](https://github.com/zmartzone/mod_auth_openidc) for their mod_auth_openidc module for Apache2.
 
+<a href='https://ko-fi.com/W7W29DSZ' target='_blank'><img height='36' style='border:0px;height:36px;' src='https://az743702.vo.msecnd.net/cdn/kofi2.png?v=0' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>
+
 ## Other resources
 
 * https://github.com/zmartzone/mod_auth_openidc/wiki/Keycloak
