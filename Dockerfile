@@ -1,7 +1,7 @@
 FROM debian:jessie
 
 ## LABELS
-LABEL authors="hzandbelt@pingidentity.com, Joost van der Griendt <j.vandergriendt@flusso.nl>"
+LABEL authors="hzandbelt@pingidentity.com, Joost van der Griendt <joostvdg@gmail.com>"
 LABEL version="0.1.0"
 LABEL description="Apache 2 with OpenIDC"
 ## LABELS
@@ -23,10 +23,6 @@ ENV MOD_AUTH_OPENIDC_VERSION 2.3.0
 ENV MOD_AUTH_OPENIDC_PKG libapache2-mod-auth-openidc_${MOD_AUTH_OPENIDC_VERSION}-1.jessie.1_amd64.deb 
 EXPOSE 80
 ## ENV
-
-########## HEALTH CHECK
-HEALTHCHECK CMD curl --fail -I http://localhost:80/ || exit 1
-########## HEALTH CHECK
 
 ## PREPARE TINI
 ADD https://github.com/krallin/tini/releases/download/${TINI_VERSION}/tini /tini
