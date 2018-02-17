@@ -1,5 +1,10 @@
 # apache2-openidc-docker
 
+[![GitHub release](https://img.shields.io/github/release/joostvdg/apache2-openidc-docker.svg)]()
+[![license](https://img.shields.io/github/license/joostvdg/apache2-openidc-docker.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/pulls/caladreas/apache2-openidc-docker.svg)]()
+[![](https://images.microbadger.com/badges/image/caladreas/apache2-openidc-docker.svg)](https://microbadger.com/images/caladreas/apache2-openidc-docker "Get your own image badge on microbadger.com")
+
 Naieve docker container configuration for Apache2 with OpenIDC integration.
 
 This image is based on the work of others: [Reposoft](https://github.com/Reposoft/openidc-keycloak-test) ([hzandbelt@pingidentity.com](https://github.com/Reposoft/openidc-keycloak-test/tree/master/openidc-jessie), [solsson](https://github.com/solsson)).
@@ -39,7 +44,7 @@ RUN ls -lath /src/site
 
 ##################
 ## RUN
-FROM caladreas/apache2-openidc:0.1.0
+FROM caladreas/apache2-openidc-docker:0.1.0
 COPY --from=build /src/site /var/www/html/
 ##################
 ######################################################
