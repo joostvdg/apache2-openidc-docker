@@ -2,7 +2,7 @@ FROM debian:jessie
 
 ## LABELS
 LABEL authors="hzandbelt@pingidentity.com, Joost van der Griendt <joostvdg@gmail.com>"
-LABEL version="0.1.0"
+LABEL version="0.2.0"
 LABEL description="Apache 2 with OpenIDC"
 ## LABELS
 

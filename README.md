@@ -46,7 +46,7 @@ RUN ls -lath /src/site
 
 ##################
 ## RUN
-FROM caladreas/apache2-openidc-docker:0.1.0
+FROM caladreas/apache2-openidc-docker:0.2.0
 COPY --from=build /src/site /var/www/html/
 ##################
 ######################################################
