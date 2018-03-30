@@ -7,6 +7,7 @@ LABEL description="Apache 2 with OpenIDC"
 ## LABELS
 
 ## ENV
+ENV DEBIAN_FRONTEND noninteractive
 ENV LAST_CHANGE 2018167021513
 ENV DEFAULT_SITE_LOC=/etc/apache2/sites-available/ \
     DEFAULT_SITE=000-default.conf \
@@ -37,7 +38,12 @@ RUN curl -s -L -o ~/${MOD_AUTH_OPENIDC_PKG} https://github.com/zmartzone/mod_aut
 RUN dpkg -i ~/${MOD_AUTH_OPENIDC_PKG} && echo ok || echo ko
 
 ADD 000-default.conf ${DEFAULT_SITE_LOC}/${DEFAULT_SITE}
-RUN a2enmod auth_openidc
+RUN a2enmod proxy \
+    && a2enmod proxy_http \
+    && a2enmod ssl \
+    && a2enmod rewrite \
+    && a2enmod auth_openidc \
+    && service apache2 stop
 ## PREPARE APACHE2 
 
 ## RUNTIME PREPARATION
